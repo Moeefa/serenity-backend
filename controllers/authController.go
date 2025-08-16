@@ -53,8 +53,6 @@ func SignUp(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": user})
 }
 
-// curl -X POST http://localhost:8080/v1/auth/signup -H "Content-Type: application/json" -d '{"email":"testuser","name":"Test User","phone":"1234567890","password":"testpassword"}'
-
 func LoginUser(c *gin.Context) {
 	var loginInput struct {
 		Email    string `json:"email" binding:"required"`
@@ -95,7 +93,6 @@ func LoginUser(c *gin.Context) {
 		"token": token,
 	})
 }
-// curl -X POST http://localhost:8080/v1/auth/login -H "Content-Type: application/json" -d '{"email":"testuser","password":"testpassword"}'
 
 func VerifyUser(c *gin.Context) {
 	user, _ := c.Get("user")

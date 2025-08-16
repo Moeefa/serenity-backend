@@ -11,7 +11,7 @@ type Recommendation struct {
 	Title        string      `json:"title"`
 	Description  string      `json:"description"`
 	Tags         Tags        `gorm:"type:json" json:"tags"`
-	Duration     int64       `json:"duration"` // Duration in milliseconds
+	Duration     int64       `json:"duration"`
 }
 
 type Tags []string

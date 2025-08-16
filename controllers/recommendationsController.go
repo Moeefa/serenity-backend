@@ -36,4 +36,3 @@ func CreateRecommendation(c *gin.Context) {
 
 	c.JSON(http.StatusCreated, recommendation)
 }
-// curl http://localhost:8080/v1/recommendations/ -X POST -H "Content-Type: application/json" -d '{"title":"New Recommendation","description":"This is a new recommendation","tags":["tag1","tag2"],"time_required":"30 minutes"}'
